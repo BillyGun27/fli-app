@@ -1,3 +1,171 @@
 page-home {
 
+    
+.bg-content{
+    background: #333333;
+}
+
+.scroll-content{
+    padding: 0px !important;
+}
+
+.vertical{
+   
+    -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
+    width:300px;
+    margin: -70px auto;
+
+}
+
+.ranger-box{
+    display: block;
+   margin: 75px 0;
+   width: 300px
+}
+.indicator{
+    margin: 0 70px;
+}
+.indicator-right{
+    margin-left:20px;
+}
+.indicator-left{
+    margin-right:20px;
+}
+
+.ranger {
+    height: 38px;
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 300px;
+  }
+  input[type=range] {
+    background: transparent;
+}
+  .ranger:focus {
+    outline: none;
+  }
+  .ranger::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 15px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: rgb(53, 53, 53);
+    border-radius: 20px;
+    border: 2px solid #e7e7e7;
+    -webkit-appearance: none;
+  }
+  .ranger::-webkit-slider-thumb {
+    border: 2px solid #e7e7e7;
+    height: 30px;
+    width: 50px;
+    border-radius: 20px;
+    background:  rgb(53, 53, 53)  url("../assets/imgs/OffToggle.png");
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -8px;
+  }
+  .ranger:focus::-webkit-slider-runnable-track {
+    background: rgb(53, 53, 53);
+  }
+  .ranger::-moz-range-track {
+    width: 100%;
+    height: 15px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: rgb(53, 53, 53);
+    border-radius: 20px;
+    border: 2px solid #e7e7e7;
+  }
+  .ranger::-moz-range-thumb {
+    border: 2px solid #e7e7e7;
+    height: 30px;
+    width: 50px;
+    border-radius: 20px;
+    background:  rgb(53, 53, 53) ;
+    cursor: pointer;
+  }
+  .ranger::-ms-track {
+    width: 100%;
+    height: 15px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+  .ranger::-ms-fill-lower {
+    background: rgb(53, 53, 53);
+    border: 0px solid #000000;
+    border-radius: 40px;
+  }
+  .ranger::-ms-fill-upper {
+    background: rgb(53, 53, 53);
+    border: 0px solid #000000;
+    border-radius: 40px;
+  }
+  .ranger::-ms-thumb {
+    margin-top: 1px;
+    border: 2px solid #e7e7e7;
+    height: 30px;
+    width: 50px;
+    border-radius: 20px;
+    background: rgb(53, 53, 53);
+    cursor: pointer;
+  }
+  .ranger:focus::-ms-fill-lower {
+    background: #3071A9;
+  }
+  .ranger:focus::-ms-fill-upper {
+    background: #3071A9;
+  }
+  .rgb-color{
+      background: black;
+      padding: 10px;
+      margin-bottom: 10px;
+  }
+
+  .red{
+      color: rgb(255, 57, 57);
+      font-weight: bold;
+      font-size: 20px;
+  }
+  .green{
+    color: rgb(57, 255, 57);
+    font-weight: bold;
+    font-size: 20px;
+  }
+   .blue{
+    color: rgb(57, 57, 255);
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .red.ranger::-webkit-slider-runnable-track {
+    background: rgb(255, 0, 0);
+  }
+  .red.ranger::-moz-range-track {
+    background: rgb(255, 0, 0);
+  }
+
+  .green.ranger::-webkit-slider-runnable-track {
+    background: rgb(0, 255, 0);
+  }
+  .green.ranger::-moz-range-track {
+    background: rgb(0, 255, 0);
+  }
+
+  .blue.ranger::-webkit-slider-runnable-track {
+    background: rgb(0, 0, 255);
+  }
+  .blue.ranger::-moz-range-track {
+    background: rgb(0, 0, 255);
+  }
+
+  .switch{
+    background: transparent;
+  }
+
+
 }

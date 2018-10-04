@@ -1,14 +1,76 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      FLI
     </ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only float-right clear (click)="presentAlert()" class="like">
+          <ion-icon [ngStyle]="setStyles()" name="wifi" ></ion-icon>
+      </button>
+  </ion-buttons>
+
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content padding class="bg-content">
+  
+    
+      <div text-center >
+        <div class="rgb-color" [ngStyle]='{"background": "rgb("+R+","+G+","+B+")" }'>
+          <button class="switch"  (click)="Switch()" block>
+          <img  [src]="status" width="120px">    
+          </button>      
+        </div>  
+        <button ion-button full (click)="ChangeMode()" style="background: white;color:black;" >
+          MODE LAMPU
+        </button>
+
+      </div>
+
+      <div [ngSwitch]="Mode">
+        <div *ngSwitchCase="true">
+            <div text-center>
+              <span class="indicator-left blue"> {{("00"+B).slice(-3)}} </span>
+              <span class="indicator  green"> {{("00"+G).slice(-3)}} </span>
+              <span class="indicator-right red"> {{("00"+R).slice(-3)}} </span>
+            </div>
+        <!--    <div style="position: relative;bottom:0px;">-->
+            <div class="vertical">
+                <div class="ranger-box"> <input class="ranger red" type="range" min="0" max="255" step="1" (change)="SendRGB()" [(ngModel)]="R"  /> </div>
+                <div class="ranger-box"> <input class="ranger green" type="range" min="0" max="255" step="1" (change)="SendRGB()" [(ngModel)]="G" /> </div> 
+                <div class="ranger-box"> <input class="ranger blue" type="range" min="0" max="255" step="1" (change)="SendRGB()" [(ngModel)]="B" /> </div>
+            </div>
+          <!--</div>-->
+
+        </div>
+        <div *ngSwitchCase="false">
+          <br>
+          <button ion-button block round large icon-left style="padding:20px 0; background: rgb(0, 175, 206);color:white;" (click)="SendMode('calm')"> 
+            <ion-icon name="color-wand"></ion-icon> calm 
+          </button>
+          <br>
+          <button ion-button block round large icon-left style="padding:20px 0; background: rgb(145, 142, 0);color:white;" (click)="SendMode('blink')"> 
+            <ion-icon name="flash"></ion-icon> blink 
+          </button>
+          <br>
+          <button ion-button block round large icon-left style="padding:20px 0; background: rgb(158, 37, 0);color:white;" (click)="SendMode('mix')">
+               <ion-icon name="bonfire"></ion-icon> mix 
+            </button>
+          <br>
+          <button ion-button block round large icon-left style="padding:20px 0; background: rgb(195, 0, 202);color:white;" (click)="SendMode('rndm')"> 
+            <ion-icon name="color-palette"></ion-icon> random 
+          </button>
+         
+        </div>
+      </div>
+     
+      
+      
+      
+   
+
+  
+              
+
 </ion-content>
